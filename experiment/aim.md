@@ -1,1 +1,1 @@
-### Aim of the experiment
+#### To study the bistable multivibrator using 555 Timer IC.  
