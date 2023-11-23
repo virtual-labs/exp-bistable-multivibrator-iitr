@@ -1,39 +1,10 @@
-{
-  "version": 2.0,
-  "questions": [
-    {
-      "question": "This is a Sample Question 1?",
-      "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
-      },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-      },
-      "correctAnswer": "a",
-      "difficulty": "beginner"
-    },
-    {
-      "question": "This is a Sample Question 2?",
-      "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
-      },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-      },
-      "correctAnswer": "c",
-      "difficulty": "beginner"
-    }
-  ]
-}
+[{"question":"Circuit which produces an output wave shape resembling that of a symmetrical or asymmetrical square wave is called","answers":{"a":"Timing generator","b":"Frequency generator","c":"Multivibrator","d":"Single vibrator"},"correctAnswer":"c"},
+{"question":"Multivibrator in which circuit is stable in either state and can be flipped from one state to other by an external trigger pulse is termed as","answers":{"a":"Astable multivibrator","b":"Monostable multivibrator","c":"Bistable multivibrator","d":"Tristable multivibrator"},"correctAnswer":"c"},
+{"question":"Multivibrator having a quasi-stable state is called","answers":{"a":"Bistable multivibrator","b":"Monostable multivibrator","c":"Astable multivibrator","d":"None of the above"},"correctAnswer":"b"},
+{"question":"The multivibrator which generates square wave of its own is the _________ multivibrator.","answers":{"a":"Monostable","b":"Bistable","c":"Astable","d":"None of the above"},"correctAnswer":"c"},
+{"question":"A multivibrator is an electronic circuit used to implement ____________.","answers":{"a":"Oscillator","b":"Timer","c":"Flip-Flop","d":"All of the Mentioned"},"correctAnswer":"d"},
+{"question":"Bistable multivibrator can be designed by using","answers":{"a":"Transistors","b":"555 timer IC","c":"Both options A and B","d":"None of the above"},"correctAnswer":"c"},
+{"question":"The internal circuitry of the 555 timer consists of ___________, an R-S flip-flop, a transistor switch, an output buffer amplifier, and a voltage divider.","answers":{"a":"A mutiplexer","b":"A voltage amplifier","c":"Two comparators","d":"A peak detector"},"correctAnswer":"c"},
+{"question":"In 555 timer IC, pin no. 3 is _______ terminal of the IC","answers":{"a":"Trigger","b":"Output","c":"Threshold","d":"Discharge"},"correctAnswer":"b"},
+{"question":"In a Bistable multivibrator circuit, a commutating capacitor is used","answers":{"a":"To increase the base storage charge","b":"To provide ac coupling","c":"To increase the speed of response","d":"To provide the speed of oscillations"},"correctAnswer":"c"},
+{"question":"Capacitor discharge interval in monostable circuits is known as","answers":{"a":"Refresh time","b":"Recovery time","c":"Dynamic time","d":"Static time"},"correctAnswer":"b"}]
