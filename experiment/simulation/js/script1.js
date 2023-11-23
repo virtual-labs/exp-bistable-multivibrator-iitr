@@ -4,6 +4,9 @@ const First = document.getElementById('First');
 const close_btn = document.getElementById('close-btn');
 const First_data = document.getElementById('First_Data');
 
+const check_button = document.getElementById('check');
+const reset_button = document.getElementById('reset');
+
 First.addEventListener('click', () => {
     First_data.classList.toggle('visible')
 });
@@ -23,18 +26,34 @@ close_btn.addEventListener('click', () => {
 
 Second.addEventListener('click', () => {
  Second_Data.classList.toggle('visible')
+ reset_button.disabled=true;
 });  
 
 btn_close.addEventListener('click', () => {
  Second_Data.classList.remove('visible')
+ 
 }); 
 var left = document.getElementById("Second_Data"); 
 left.style.display ="block";
+
+
+
+
+const bread_but=document.getElementById("breadbutton");
+const supply_but=document.getElementById("supplybutton");
+const switch_but=document.getElementById("switchbutton");
+const led_but=document.getElementById("ledbutton");
+const r1_but=document.getElementById("resistancebutton");
+const c1_but=document.getElementById("capbutton");
+const ic_but=document.getElementById("ic2button");
 
 // Components hide show code here
 function breadboard() {
     var x = document.getElementById("board");
     x.style.visibility = "visible";
+
+    bread_but.disabled=true;
+    bread_but.style.cursor="not-allowed";
 
     var instance = new BoardController();
 
@@ -258,13 +277,17 @@ function breadboard() {
         instance.addEndPoint('brown',4,1, 'board', 'row8', 'r199', [0, 0, 0, -1, 838.5, 278], 'blue');
         instance.addEndPoint('brown',4,1, 'board', 'row8', 'r200', [0, 0, 0, -1, 852, 278], 'blue');
 
-        document.getElementById("checkbutton").disabled=false;
+        
     }
+    disabledButton();
 }
 
 function inputs() {
     var x = document.getElementById("inputs");
     x.style.visibility = "visible";
+
+    switch_but.disabled=true;
+    switch_but.style.cursor="not-allowed";
 
     var inputs = new BoardController();
     inputs.setJsPlumbInstance(jsPlumb);
@@ -272,10 +295,15 @@ function inputs() {
 
     inputs.addEndPoint('red',6,1, 'inputs', 'input_A', 'input_A11', [0, 0, 0, 0, 597, -90], 'red');
     inputs.addEndPoint('red',6,1, 'inputs', 'input_B', 'input_B11', [0, 0, 0, 0, 657, -90], 'red');
+
+    disabledButton();
 }
 function inputs1() {
     var x = document.getElementById("inputs1");
     x.style.visibility = "visible";
+
+    switch_but.disabled=true;
+    switch_but.style.cursor="not-allowed";
 
     var inputs = new BoardController();
     inputs.setJsPlumbInstance(jsPlumb);
@@ -283,11 +311,16 @@ function inputs1() {
 
     inputs.addEndPoint('red',6,1, 'inputs1', 'input_A1', 'input_A12', [0, 0, 0, 0, 337, -90], 'red');
     inputs.addEndPoint('red',6,1, 'inputs1', 'input_B1', 'input_B12', [0, 0, 0, 0, 397, -90], 'red');
+
+    disabledButton();
 }
 
 function ic555() {
     var x = document.getElementById("ic555");
     x.style.visibility = "visible";
+
+    ic_but.disabled=true;
+    ic_but.style.cursor="not-allowed";
 
     var ic555 = new BoardController();
     ic555.setJsPlumbInstance(jsPlumb);
@@ -343,6 +376,7 @@ function ic555() {
        ic555.addEndPoint('green',4.2,1, 'ic555', 'ic555_4', 'ic555_44', [0, 0, 1, -1, 45.5, 148], 'red');
 
   }
+  disabledButton();
 }
 
 
@@ -351,6 +385,9 @@ function supply() {
     var x = document.getElementById("supply");
     x.style.visibility = "visible";
     
+    supply_but.disabled=true;
+    supply_but.style.cursor="not-allowed";
+
     var supply = new BoardController();
     supply.setJsPlumbInstance(jsPlumb);
     supply.setCircuitContainer('mid');
@@ -359,11 +396,16 @@ function supply() {
 
     supply.addEndPoint('red',9,1, 'supply', 'VCC', 'VCC', [0, 0, 0, 0, 51,    55], 'blue');
     supply.addEndPoint('black',9,1, 'supply', 'GND', 'GND', [0, 0, 0, 0, 106.5, 55], 'red');
+    disabledButton();
 }
 
 function led2() {
     var x = document.getElementById("led1");
     x.style.visibility = "visible";
+
+    led_but.disabled=true;
+    led_but.style.cursor="not-allowed";
+
     var led = new BoardController();
     led.setJsPlumbInstance(jsPlumb);
     led.setCircuitContainer('mid');
@@ -380,11 +422,18 @@ function led2() {
    led.addEndPoint('green',4.2,1, 'led1', 'led_C1', 'led_C103', [0, 0, 1, -1, 55.5, 112.5], 'red');
    led.addEndPoint('green',4.2,1, 'led1', 'led_C1', 'led_C104', [0, 0, 1, -1, 55.5, 126], 'red');
    led.addEndPoint('green',4.2,1, 'led1', 'led_C1', 'led_C105', [0, 0, 1, -1, 55.5, 139.5], 'red');
+
+   disabledButton();
+
 }
 
 function capacitor() {
     var x = document.getElementById("cap");
     x.style.visibility = "visible";
+
+    c1_but.disabled=true;
+    c1_but.style.cursor="not-allowed";
+
     var cap = new BoardController();
     cap.setJsPlumbInstance(jsPlumb);
     cap.setCircuitContainer('mid');
@@ -401,11 +450,17 @@ function capacitor() {
     cap.addEndPoint('green',4.2,1, 'cap', 'cap_A1', 'cap_A102', [0, 0, 1, -1, 0.5, 94], 'red');
     cap.addEndPoint('green',4.2,1, 'cap', 'cap_A1', 'cap_A103', [0, 0, 1, -1, 0.5, 108], 'red');
     cap.addEndPoint('green',4.2,1, 'cap', 'cap_A1', 'cap_A104', [0, 0, 1, -1, 0.5, 120], 'red');
+
+    disabledButton();
 }
 
 function resistor3() {
     var x = document.getElementById("resistance3");
     x.style.visibility = "visible";
+
+    r1_but.disabled=true;
+    r1_but.style.cursor="not-allowed";
+
     var resistance3= new BoardController();
     resistance3.setJsPlumbInstance(jsPlumb);
     resistance3.setCircuitContainer('mid');
@@ -423,6 +478,7 @@ function resistor3() {
     resistance3.addEndPoint('green',4.2,1, 'resistance3', 'resistance3_A1', 'resistance3_A103', [0, 0, 1, -1, 4, 80], 'red');
     resistance3.addEndPoint('green',4.2,1, 'resistance3', 'resistance3_A1', 'resistance3_A104', [0, 0, 1, -1, 4, 93], 'red');
 
+    disabledButton();
 }
 function resistor4() {
     var x = document.getElementById("resistance4");
@@ -443,6 +499,7 @@ function resistor4() {
     resistance4.addEndPoint('green',4.2,1, 'resistance4', 'resistance4_A1', 'resistance4_A102', [0, 0, 1, -1, 4, 67], 'red');
     resistance4.addEndPoint('green',4.2,1, 'resistance4', 'resistance4_A1', 'resistance4_A103', [0, 0, 1, -1, 4, 80], 'red');
     resistance4.addEndPoint('green',4.2,1, 'resistance4', 'resistance4_A1', 'resistance4_A104', [0, 0, 1, -1, 4, 93], 'red');
+    disabledButton();
 
 }
 function resistor5() {
@@ -464,7 +521,21 @@ function resistor5() {
     resistance5.addEndPoint('green',4.2,1, 'resistance5', 'resistance5_A1', 'resistance5_A102', [0, 0, 1, -1, 4, 67], 'red');
     resistance5.addEndPoint('green',4.2,1, 'resistance5', 'resistance5_A1', 'resistance5_A102', [0, 0, 1, -1, 4, 80], 'red');
     resistance5.addEndPoint('green',4.2,1, 'resistance5', 'resistance5_A1', 'resistance5_A102', [0, 0, 1, -1, 4, 94], 'red');
+    disabledButton();
+}
 
+function disabledButton()
+{
+
+    
+
+  if(window.getComputedStyle(document.getElementById('board')).visibility === "visible" && window.getComputedStyle(document.getElementById('inputs')).visibility === "visible" && 
+   window.getComputedStyle(document.getElementById('led1')).visibility === "visible" && window.getComputedStyle(document.getElementById('supply')).visibility === "visible" && 
+  window.getComputedStyle(document.getElementById('cap')).visibility === "visible" && window.getComputedStyle(document.getElementById('resistance3')).visibility === "visible" && window.getComputedStyle(document.getElementById('ic555')).visibility === "visible" )
+  {
+   
+  document.getElementById('checkbutton').disabled=false; 
+  }
 }
 
 function myFunction() {
@@ -560,10 +631,17 @@ function myFunction() {
        document.getElementById("cell1").value="0";
 document.getElementById("cell2").value="1";
 
+document.getElementById('check').disabled=true;
+document.getElementById('reset').disabled=true;
+
+document.querySelectorAll('.cell').forEach(elem => {
+  elem.disabled = true;elem.style.cursor="not-allowed"
+});
 document.getElementById("startbutton").disabled=true;
 
 document.getElementById("second").disabled=false;
 document.getElementById("second").style.cursor="pointer"; 
+
 
   //document.getElementById("switch1").onclick=function(){change3()};
 
@@ -593,7 +671,11 @@ function resetCircuit() {
         
     sessionStorage.setItem("reloading", "true");
     document.location.reload();
+
+  
 }
+
+
 }
        
 	
@@ -601,10 +683,26 @@ function resetCircuit() {
           {
                 alert("Do you want to reset the table?");
                   
+                
+                document.getElementById("check").disabled=false;
+                document.getElementById("second").disabled=true;
+                document.getElementById("second").style.cursor="not-allowed";
+
+                Second.style.cursor="pointer";  
+                  document.querySelectorAll('.cell').forEach(elem => {
+                    elem.disabled = false;elem.style.cursor=""
+                });
+
+
                 document.getElementById("cell2").value='';
 
                document.getElementById("cell1").value='';
     
+               check_button.disabled=false;
+               reset_button.disabled=false;
+               document.getElementById("second").disabled=true;
+               document.getElementById("second").style.cursor="not-allowed"; 
+               
          }
 
 
@@ -617,9 +715,14 @@ function resetCircuit() {
               
         if(a=="0" && b=="1")
          {
-         	alert("Right data. Now proceed to simulation.");
+         	alert("Right data. Now place the components.");
            document.getElementById("second").disabled=false;
-           document.getElementById("second").style.cursor="pointer";  
+           document.getElementById("second").style.cursor="pointer"; 
+           check_button.disabled=true;
+           document.querySelectorAll('.cell').forEach(elem => {
+            elem.disabled = true;elem.style.cursor="not-allowed"
+        });
+
          }
          else if(a=="" && b==""  )
          {
