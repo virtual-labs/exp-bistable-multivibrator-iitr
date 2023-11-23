@@ -29,6 +29,7 @@ A multivibrator is basically a two-stage amplifier with output of one feedback t
 |--|--|--|
 |**First State**|Transistor 1|Transistor 2|
 |**Second State**|Transistor 2|Transistor 1|
+
 </center>
   
 
