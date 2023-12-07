@@ -1,4 +1,4 @@
-## Procedure<br>
+
 <div style="text-align:justify">
 
 **1.** Fill the truth table and click on Check button.   
